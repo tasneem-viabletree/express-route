@@ -25,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // };
 
 router.get('/', function (req, res) {
-    return res.json({ foo: 'barshs' });
+    return res.json({ foo: 'bar' });
 });
 
 app.use(router);
