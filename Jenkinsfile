@@ -7,9 +7,9 @@ pipeline {
       }
     }
 
-    stage('Tests') {
+    stage('Log') {
       steps {
-        sh 'npm run test'
+        sh 'echo $PATH'
       }
     }
 
