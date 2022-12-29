@@ -16,5 +16,6 @@ pipeline {
   }
   environment {
     PATH = '/Users/macbook/.nvm/versions/node/v19.0.0/bin/npm'
+    sh = '/bin/sh'
   }
 }
