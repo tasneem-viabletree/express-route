@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'express node'
+    }
+
+  }
   stages {
     stage('CheckoutCode') {
       steps {
