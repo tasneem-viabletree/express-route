@@ -13,4 +13,4 @@ jobs:
         aws-region: us-east-1
     - name: Sync files to S3
       run: |
-        aws s3 sync index.js s3://my-s3-github-action/ --exclude ".git/*"
+        aws s3 cp index.js s3://my-s3-github-action/index.js
