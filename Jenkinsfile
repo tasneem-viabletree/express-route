@@ -1,7 +1,5 @@
 pipeline {
-  agent {
-    label 'my-agent'
-  }
+  agent any
   environment {
     PATH = "${tool 'Git'}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env.PATH}"
   }
