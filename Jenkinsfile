@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    PATH = "${tool 'NodeJS'}/bin:${env.PATH}"
+    PATH = "/Users/macbook/.nvm/versions/node/v19.0.0/bin/NPM"
   }
   stages {
     stage('CheckoutCode') {
