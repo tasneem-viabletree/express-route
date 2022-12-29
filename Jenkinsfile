@@ -1,20 +1,15 @@
 pipeline {
-  agent any
+  agent {
+    label 'my-agent'
+  }
   environment {
-    PATH = "${tool 'Git'}/bin:${env.PATH}"
+    PATH = "${tool 'Git'}/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env.PATH}"
   }
   stages {
-    stage('CheckoutCode') {
+    stage('Build') {
       steps {
-        git(url: 'https://github.com/tasneem-viabletree/express-route', branch: 'main')
+        sh 'npm run test'
       }
     }
-
-    stage('Log') {
-      steps {
-        sh 'echo $PATH'
-      }
-    }
-
   }
 }
